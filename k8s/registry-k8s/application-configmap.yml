@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-config
+  namespace: demo
+#common configuration shared between all applications
+data:
+  application.yml: |-
+    configserver:
+      name:  JHipster Registry
+      status: Connected to the JHipster Registry running in Kubernetes
+    eureka:
+      client:
+        initial-instance-info-replication-interval-seconds: 15
+        instance-info-replication-interval-seconds: 15
+        registry-fetch-interval-seconds: 15
+        fetch-registry: true
+        register-with-eureka: true
+        eureka-service-url-poll-interval-seconds: 15
+      instance:
+        lease-renewal-interval-in-seconds: 10
+        registry-default-open-for-traffic-count: 0
+    spring:
+      security:
+        oauth2:
+          client:
+            provider:
+              oidc:
+                issuer-uri: https://dev-42535922.okta.com/oauth2/default
+            registration:
+              oidc:
+                client-id: 0oa7nxthxcnIbJaUo5d7
+                client-secret: "{cipher}a10366d748df451978b9cd9652356bc4cc0ea1506b9160d2084e8c2af799e41c2b8576584182cd1eeb9262d73f152907786c7567782f30b2283048279aec1f3a"
+    jhipster:
+      security:
+        authentication:
+          jwt:
+            base64-secret: Njc0OGMyNjdjZTk5OTI2Y2E0ZGViOGZiY2ZkNzU0Y2U3MjliZDE5ZDE5ZjZmZTViZThhZmYyMGIzY2NmZDMxZTIwODkwNjliMDdhMzMwN2M5ODQ3Mjc3ZGEwY2E1YzI1MDhlYw==
+  # app specific configuration
+  jhipster-registry.yml: |-
+    eureka:
+      client:
+        service-url:
+          defaultZone: http://admin:${spring.security.user.password}@jhipster-registry-0.jhipster-registry.demo.svc.cluster.local:8761/eureka/,http://admin:${spring.security.user.password}@jhipster-registry-1.jhipster-registry.demo.svc.cluster.local:8761/eureka/

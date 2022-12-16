@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cstore
+  namespace: demo
+  labels:
+    app: cstore
+spec:
+  selector:
+    app: cstore
+  ports:
+    - name: http
+      port: 8082

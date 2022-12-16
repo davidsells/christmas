@@ -1,0 +1,22 @@
+commonLabels:
+  app.kubernetes.io/genereted-by: JHipster
+
+namespace: demo
+
+resources:
+  - namespace.yml
+  # Individual apps
+  - cblog-k8s/cblog-deployment.yml
+  - cblog-k8s/cblog-service.yml
+  - cblog-k8s/cblog-neo4j.yml
+  - cgateway-k8s/cgateway-deployment.yml
+  - cgateway-k8s/cgateway-service.yml
+  - cgateway-k8s/cgateway-postgresql.yml
+  - cstore-k8s/cstore-deployment.yml
+  - cstore-k8s/cstore-service.yml
+  - cstore-k8s/cstore-mongodb.yml
+  # service discovery eureka/consul
+  - registry-k8s/jhipster-registry.yml
+  - registry-k8s/application-configmap.yml
+
+patchesJson6902:

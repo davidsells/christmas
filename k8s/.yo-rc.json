@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["cblog", "cgateway", "cstore"],
+    "clusteredDbApps": ["cstore"],
+    "directoryPath": "../",
+    "dockerPushCommand": "docker push",
+    "dockerRepositoryName": "davidsells",
+    "ingressDomain": "",
+    "istio": false,
+    "jwtSecretKey": "Njc0OGMyNjdjZTk5OTI2Y2E0ZGViOGZiY2ZkNzU0Y2U3MjliZDE5ZDE5ZjZmZTViZThhZmYyMGIzY2NmZDMxZTIwODkwNjliMDdhMzMwN2M5ODQ3Mjc3ZGEwY2E1YzI1MDhlYw==",
+    "kubernetesNamespace": "demo",
+    "kubernetesServiceType": "LoadBalancer",
+    "kubernetesStorageClassName": "",
+    "kubernetesUseDynamicStorage": true,
+    "monitoring": "no",
+    "serviceDiscoveryType": "eureka"
+  }
+}

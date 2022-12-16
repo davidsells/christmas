@@ -1,0 +1,13 @@
+{
+  "generator-jhipster": {
+    "appsFolders": ["cgateway", "cblog", "cstore"],
+    "clusteredDbApps": [],
+    "deploymentType": "docker-compose",
+    "directoryPath": "../",
+    "dockerRepositoryName": "davidsells",
+    "gatewayType": "SpringCloudGateway",
+    "jwtSecretKey": "YmJkZTMxYzcwMjU4MGRkNDRjNTA2OGUxZmM1NDkwNjJmYTE5M2FlM2QxZTcxZTQ2OGVkNTAxZTAzYzUzNWE5NWVmODYxZTM0NGExYjY2OTc1MWQ2NGQxOTViM2Q4NWFhNzc0OQ==",
+    "monitoring": "no",
+    "serviceDiscoveryType": "eureka"
+  }
+}

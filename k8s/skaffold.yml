@@ -1,0 +1,18 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+    - image: davidsells/cblog
+      context: ../cblog
+      jib: {}
+    - image: davidsells/cgateway
+      context: ../cgateway
+      jib: {}
+    - image: davidsells/cstore
+      context: ../cstore
+      jib: {}
+  tagPolicy:
+    envTemplate:
+      template: "{{.IMAGE_NAME}}:latest"
+deploy:
+  kustomize: {}
