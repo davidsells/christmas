@@ -24,20 +24,20 @@ logSummary() {
 
 default() {
     suffix=k8s
-    kubectl apply -f namespace.yml
-    kubectl apply -f registry-${suffix}/
-    kubectl apply -f cblog-${suffix}/
-    kubectl apply -f cgateway-${suffix}/
-    kubectl apply -f cstore-${suffix}/
+    microk8s.kubectl apply -f namespace.yml
+    microk8s.kubectl apply -f registry-${suffix}/
+    microk8s.kubectl apply -f cblog-${suffix}/
+    microk8s.kubectl apply -f cgateway-${suffix}/
+    microk8s.kubectl apply -f cstore-${suffix}/
 }
 
 delete_apps() {
     suffix=k8s
-    kubectl delete -f registry-${suffix}/
-    kubectl delete -f cblog-${suffix}/
-    kubectl delete -f cgateway-${suffix}/
-    kubectl delete -f cstore-${suffix}/
-    kubectl delete -f namespace.yml
+    microk8s.kubectl delete -f registry-${suffix}/
+    microk8s.kubectl delete -f cblog-${suffix}/
+    microk8s.kubectl delete -f cgateway-${suffix}/
+    microk8s.kubectl delete -f cstore-${suffix}/
+    microk8s.kubectl delete -f namespace.yml
 }
 
 kustomize() {
