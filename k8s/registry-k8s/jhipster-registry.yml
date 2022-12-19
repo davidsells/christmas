@@ -81,12 +81,6 @@ spec:
               value: native
             - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_0_SEARCH_LOCATIONS
               value: file:./central-config
-            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_TYPE
-              value: git
-            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_URI
-              value: https://github.com/davidsells/christmas/
-            - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_SEARCH_PATHS
-              value: config
             - name: SPRING_CLOUD_CONFIG_SERVER_COMPOSITE_1_LABEL
               value: main
             - name: EUREKA_INSTANCE_LEASE_RENEWAL_INTERVAL_IN_SECONDS
